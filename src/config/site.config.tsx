@@ -14,7 +14,7 @@ export const siteConfig = {
   description: `Isomorphic the ultimate React TypeScript Admin Template. Streamline your admin dashboard development with our feature-rich, responsive, and highly customizable solution. Boost productivity and create stunning admin interfaces effortlessly.`,
   logo: logoImg,
   icon: logoIconImg,
-  mode: MODE.LIGHT,
+  mode: MODE.DARK,
   layout: LAYOUT_OPTIONS.HYDROGEN,
   // TODO: favicon
 };
