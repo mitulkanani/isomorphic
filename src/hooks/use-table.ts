@@ -39,6 +39,11 @@ export function useTable<T extends AnyObject>(
       setSelectedRowKeys(data.map((record) => record.id));
     }
   };
+  
+  useEffect(() => {
+    localStorage.setItem('selectedRowKeys', JSON.stringify(selectedRowKeys));
+  }, [selectedRowKeys]);
+
 
   /*
    * Handle sorting
@@ -173,11 +178,11 @@ export function useTable<T extends AnyObject>(
           Object.values(item).some((value) =>
             typeof value === 'object'
               ? value &&
-                Object.values(value).some(
-                  (nestedItem) =>
-                    nestedItem &&
-                    String(nestedItem).toLowerCase().includes(searchTermLower)
-                )
+              Object.values(value).some(
+                (nestedItem) =>
+                  nestedItem &&
+                  String(nestedItem).toLowerCase().includes(searchTermLower)
+              )
               : value && String(value).toLowerCase().includes(searchTermLower)
           )
         )
@@ -200,11 +205,11 @@ export function useTable<T extends AnyObject>(
       Object.values(item).some((value) =>
         typeof value === 'object'
           ? value &&
-            Object.values(value).some(
-              (nestedItem) =>
-                nestedItem &&
-                String(nestedItem).toLowerCase().includes(searchTermLower)
-            )
+          Object.values(value).some(
+            (nestedItem) =>
+              nestedItem &&
+              String(nestedItem).toLowerCase().includes(searchTermLower)
+          )
           : value && String(value).toLowerCase().includes(searchTermLower)
       )
     );

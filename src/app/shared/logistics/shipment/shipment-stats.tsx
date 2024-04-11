@@ -21,31 +21,31 @@ const data = [
     id: 1,
     count: 570,
     icon: <ShipWithContainer />,
-    label: 'Asset Registered',
+    label: 'Total Assets',
   },
   {
     id: 2,
     count: 380,
     icon: <ShippingBox />,
-    label: 'Asset Delivered',
+    label: 'Hardware',
   },
   {
     id: 3,
     count: 118,
     icon: <CargoPallet />,
-    label: 'Asset Consolidated',
+    label: 'Software',
   },
   {
     id: 4,
     count: toCurrency(5534),
     icon: <MoneyInHand />,
-    label: 'Accounts Receivable',
+    label: 'IOT',
   },
   {
     id: 5,
     count: 130999,
     icon: <Containers />,
-    label: 'Total Asset',
+    label: 'OT',
   },
 ];
 
